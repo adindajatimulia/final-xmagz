@@ -148,7 +148,7 @@
     }
 
     &.searchFocus {
-      background-color: $primary-color;
+      //background-color: $primary-color;
 
       .menu-toggle {
         display: none;
@@ -189,7 +189,7 @@
   }
 
   .search-wrapper {
-    background-color: $primary-color;
+    //background-color: $primary-color;
     color: #ffffff;
     height: 100%;
     opacity: 0;
@@ -732,6 +732,124 @@
     }
   }
 }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      border-radius:15px;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .main{
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 30px;
+}
+
+.left-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.status-wrapper{
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    /* border: 1px solid #dfdfdf; */
+    border-radius: 2px;
+    padding: 10px;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.status-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.status-card{
+    flex: 0 0 auto;
+    width: 80px;
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.profile-pic{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3px;
+    background: linear-gradient(45deg, rgb(255, 230, 0), rgb(255, 0, 128) 80%);
+}
+
+.profile-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.username{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    margin-top:5px;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+
 </style>
 
 <template>
@@ -761,6 +879,57 @@
         <Button class="search-close" v-on:click.native="searchFocus(false)">
           <i class="fas fa-times"></i>
         </Button>
+      </div>
+
+      <button id="myBtn"  v-on:click="modal()" style="border-radius: 100%;height: 50px;width: 50px;"> <i class="fas fa-users"></i> </button>
+       <!-- The Modal -->
+      <div id="myModal" class="modal">
+          <div class="modal-content">
+          <span class="close" v-on:click="close()">&times;</span>
+          <h1 style="font-weight:bold;">Feeds Berita Terbaru</h1>
+            <section class="main" style="margin-top:-10px;">
+                  <div class="wrapper">
+                      <div class="left-col">
+                          <div class="status-wrapper">
+                              <div class="status-card">
+                                  <div class="profile-pic"><img id="user0" src="" alt="" v-on:click="framekonten(0)"></div>
+                                  <p class="username0"></p>
+                              </div>
+                              <div class="status-card">
+                                  <div class="profile-pic"><img id="user1" src="" alt="" v-on:click="framekonten(1)"></div>
+                                  <p class="username1" ></p>
+                              </div>
+                              <div class="status-card">
+                                  <div class="profile-pic"><img id="user2" src="" alt=""  v-on:click="framekonten(2)"></div>
+                                  <p class="username2"></p>
+                              </div>
+                              <div class="status-card">
+                                  <div class="profile-pic"><img id="user3" src="" alt=""  v-on:click="framekonten(3)"></div>
+                                  <p class="username3" ></p>
+                              </div>
+                              <div class="status-card">
+                                  <div class="profile-pic"><img id="user4" src="" alt=""  v-on:click="framekonten(4)"></div>
+                                  <p class="username4" ></p>
+                              </div>
+                              <div class="status-card">
+                                  <div class="profile-pic"><img id="user5" src="" alt=""  v-on:click="framekonten(1)"></div>
+                                  <p class="username5"></p>
+                              </div>
+                              <div class="status-card">
+                                  <div class="profile-pic"><img id="user6" src="" alt=""  v-on:click="framekonten(2)"></div>
+                                  <p class="username6"></p>
+                              </div>
+                             
+                      </div>
+                  </div>
+                  </div>
+              </section>
+
+              <iframe width="100%" height="600"
+              src="" id="main-news-content">
+              </iframe>
+            
+          </div>
       </div>
 
       <div class="menu-container" :class="{ active: menu.toggled }">
@@ -1004,61 +1173,11 @@
           <li>
             <div
               v-on:click="
-                turnPage(21);
-                tableOfContent.active = false;
-              "
-            >
-              {{ $t("table_of_contents_items.title12") }}
-            </div>
-          </li>
-          <li>
-            <div
-              v-on:click="
                 turnPage(22);
                 tableOfContent.active = false;
               "
             >
               {{ $t("table_of_contents_items.title13") }}
-            </div>
-          </li>
-          <li>
-            <div
-              v-on:click="
-                turnPage(26);
-                tableOfContent.active = false;
-              "
-            >
-              {{ $t("table_of_contents_items.title14") }}
-            </div>
-          </li>
-          <li>
-            <div
-              v-on:click="
-                turnPage(28);
-                tableOfContent.active = false;
-              "
-            >
-              {{ $t("table_of_contents_items.title15") }}
-            </div>
-          </li>
-          <li>
-            <div
-              v-on:click="
-                turnPage(30);
-                tableOfContent.active = false;
-              "
-            >
-              {{ $t("table_of_contents_items.title16") }}
-            </div>
-          </li>
-          <li>
-            <div
-              v-on:click="
-                turnPage(32);
-                tableOfContent.active = false;
-              "
-            >
-              {{ $t("table_of_contents_items.title17") }}
             </div>
           </li>
         </template>
@@ -1067,7 +1186,7 @@
             <div>
               {{ $t("song.music1") }}
               <audio controls>
-                <source src="/video/just relax.mp3" type="audio/mp3">
+                <source src="/video/justrelax.mp3" type="audio/mp3">
               </audio>
             </div>
           </li>
@@ -1075,7 +1194,7 @@
             <div>
               {{ $t("song.music2") }}
               <audio controls>
-                <source src="/video/please calm my mind.mp3" type="audio/mp3">
+                <source src="/video/pleasecalmmymind.mp3" type="audio/mp3">
               </audio>
             </div>
           </li>
@@ -1083,7 +1202,7 @@
             <div>
               {{ $t("song.music3") }}
               <audio controls>
-                <source src="/video/the weekend.mp3" type="audio/mp3">
+                <source src="/video/theweekend.mp3" type="audio/mp3">
               </audio>
             </div>
           </li>
@@ -1320,61 +1439,11 @@
         <li>
           <div
             v-on:click="
-              turnPage(21);
-              tableOfContent.active = false;
-            "
-          >
-            {{ $t("table_of_contents_items.title12") }}
-          </div>
-        </li>
-        <li>
-          <div
-            v-on:click="
               turnPage(22);
               tableOfContent.active = false;
             "
           >
             {{ $t("table_of_contents_items.title13") }}
-          </div>
-        </li>
-        <li>
-          <div
-            v-on:click="
-              turnPage(26);
-              tableOfContent.active = false;
-            "
-          >
-            {{ $t("table_of_contents_items.title14") }}
-          </div>
-        </li>
-        <li>
-          <div
-            v-on:click="
-              turnPage(28);
-              tableOfContent.active = false;
-            "
-          >
-            {{ $t("table_of_contents_items.title15") }}
-          </div>
-        </li>
-        <li>
-          <div
-            v-on:click="
-              turnPage(30);
-              tableOfContent.active = false;
-            "
-          >
-            {{ $t("table_of_contents_items.title16") }}
-          </div>
-        </li>
-        <li>
-          <div
-            v-on:click="
-              turnPage(32);
-              tableOfContent.active = false;
-            "
-          >
-            {{ $t("table_of_contents_items.title17") }}
           </div>
         </li>
       </ul>
@@ -1517,6 +1586,61 @@ export default {
     };
   },
   methods: {
+      framekonten(param){
+       jQuery.ajax({
+        type: 'GET',
+        async: false ,
+        url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC8-PFvO8E8Bd76Nbb0e9kWg&key=AIzaSyD4htjzvjqrRRYtEcjkQdsHTwHqRypdX7U&maxResult=8&order=date',
+        dataType: 'json',
+        success: function (data) {
+          // alert("TEST");
+             document.getElementById("main-news-content").src='https://www.youtube.com/embed/' + data['items'][param]['id']['videoId'];
+          // document.getElementById("main-news-content").src="https://www.youtube.com/embed/qpYWOXT3iuM"; 
+       }
+       })
+    },
+    modal(){
+        let modal = document.getElementById("myModal");
+        modal.style.display = "block";
+        jQuery.ajax({
+        type: 'GET',
+        async: false ,
+        url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC8-PFvO8E8Bd76Nbb0e9kWg&key=AIzaSyD4htjzvjqrRRYtEcjkQdsHTwHqRypdX7U&maxResult=8&order=date',
+        dataType: 'json',
+        success: function (data) {
+          // alert("TEST");
+            
+            for( let i = 0 ; i <= 6 ; i++){
+
+              if( i > 4){
+                   document.getElementById("user"+[5]).src = data['items'][0]['snippet']['thumbnails']['high']['url'];    
+                   document.getElementById("main-news-content").src='https://www.youtube.com/embed/' + data['items'][0]['id']['videoId'];
+                   document.getElementById("user"+[6]).src = data['items'][1]['snippet']['thumbnails']['high']['url'];    
+                   document.getElementById("main-news-content").src='https://www.youtube.com/embed/' + data['items'][0]['id']['videoId'];
+              }
+              let snippet = (data['items'][i]['snippet']['channelTitle']);
+              document.getElementsByClassName("username"+[i]).innerHTML = snippet;
+              document.getElementById("user"+[i]).src = data['items'][i]['snippet']['thumbnails']['high']['url'];    
+             document.getElementById("main-news-content").src='https://www.youtube.com/embed/' + data['items'][0]['id']['videoId'];
+            }
+              // document.getElementById("main-news-content").src="https://www.youtube.com/embed/qpYWOXT3iuM";
+        },
+        error : function(x, e) {
+            alert('server error occoured');
+            if(x.status==0){ alert('0 error'); 
+            }else if(x.status==404){ alert('404 error'); 
+            }else if(x.status==500){ alert('500 error'); 
+            }else if(e=='parsererror'){ alert('Error.nParsing JSON Request failed.'); 
+            }else if(e=='timeout'){ alert('Time out.'); 
+            }else { alert(x.responseText); }
+          }
+      });
+        
+    },
+     close(){
+        let modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    },
     turnPage(page) {
       const magazine = window.jQuery(".magazine");
       if (magazine.turn("hasPage", page)) magazine.turn("page", page);

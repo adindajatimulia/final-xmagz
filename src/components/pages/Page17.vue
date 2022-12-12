@@ -13,7 +13,7 @@
     width: 270px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-      top: 31px;
+      top: 32px;
       left: 16px;
       width: 54%;
       line-height: 15px;
@@ -34,11 +34,11 @@
     .text {
       span {
         color: #ffffff;
-        font-weight: 900;
+        font-weight: 600;
         word-spacing: 1px;
 
         @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-          font-size: 19px;
+          font-size: 18px;
         }
 
         @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {

@@ -38,7 +38,7 @@
         word-spacing: 1px;
 
         @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-          font-size: 19px;
+          font-size: 15px;
         }
 
         @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {

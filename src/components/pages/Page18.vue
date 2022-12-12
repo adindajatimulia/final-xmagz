@@ -10,12 +10,12 @@
     position: absolute;
     top: 200px;
     left: 60px;
-    width: 270px;
+    width: 290px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
       top: 170px;
       left: 35px;
-      width: 54%;
+      width: 70%;
       line-height: 15px;
     }
 
@@ -63,7 +63,7 @@
     font-size: 8px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-      top: 230px;
+      top: 220px;
       left: 35px;
       width: 280px;
     }

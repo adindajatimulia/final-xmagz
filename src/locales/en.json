@@ -8,23 +8,30 @@
   "comment_post": "Post",
   "table_of_contents": "Table Of Contents",
   "table_of_contents_items": {
-    "title1": "Regards",
-    "title2": "Maspion Officially Opens",
-    "title3": "Maspion Synergizes With The World Of Education",
-    "title4": "Maspion Bank New Savings Program",
-    "title5": "Dahsyatt Savings Will Print One Million MSMEs",
-    "title6": "Maspion Electronic Products",
-    "title7": "Maspion Household Products",
-    "title8": "Artificial intelligence",
-    "title9": "Maspion Pioneers of Economic Awakening During the Pandemic",
-    "title10": "Jatuh Bangun Dunia Perfilman",
-    "title11": "Astrotech Computer",
-    "title12": "Iswa Computer",
-    "title13": "Name of SMK Negeri 1 Surabaya is Mentioned in PFF",
-    "title14": "Begini Cara SMK Negeri 1 Hadapi Pandemi",
-    "title15": "Bersatunya Anak-Anak Teknologi",
-    "title16": "Tak Kenal Maka Tak Sayang",
-    "title17": "Salam Rindu"
+    "title1": "Story of Bank Maspion",
+    "title2": "Maspion IT",
+    "title3": "Subsidiary Maspion",
+    "title4": "Utilization Technology Information and Communication Technology in Learning",
+    "title5": "History Polytechnic Ubaya",
+    "title6": "The Journey",
+    "title7": "School Events",
+    "title8": "Event Mall Maspion IT",
+    "title9": "Axioo Class",
+    "title10": "Inspiration Story",
+    "title11": "Bank Mapion",
+    "title13": "Closing"
+  },
+  "button":{
+    "title": "Language",
+    "inggris": "English",
+    "indonesia": "Indonesia",
+    "jawa": "Javanese"
+  },
+  "song":{
+    "title": "Music",
+    "music1": "Just Relax",
+    "music2": "Please Calm My Mind",
+    "music3": "The Weekend"
   },
   "p1": {
     "title": "",
@@ -156,7 +163,7 @@
     "paragraph6": "ADINDA JATI MULIA PROGRAMMER"
   },
   "p22": {
-    "title": "SALAM PENUTUP",
+    "title": "CLOSING",
     "paragraph1": "It doesn't feel like it's the end of the X-MAGX digital magazine page, hopefully all readers can enjoy the news and features we provide. We hope that the users of X-MAGX digital magazine can feel helpful and comfortable in using our digital magazine. Without the readers of X-MAGX digital magazine, our magazine has value. We also expect our readers to give criticism and suggestions to X-MAGX magazine, so that we can the best for our readers."
   },
   "p23": {

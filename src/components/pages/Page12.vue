@@ -11,6 +11,7 @@
     top: 26px;
     left: 60px;
     width: 412px;
+    line-height:30px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
       top: 15px;

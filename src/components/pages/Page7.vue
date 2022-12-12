@@ -13,9 +13,9 @@
     width: 270px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-      top: 20px;
+      top: 27px;
       left: 23px;
-      width: 197px;
+      width: 240px;
     }
 
     @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -35,7 +35,7 @@
         color: #000066;
         font-weight: 900;
         font-size: 1.1rem;
-        line-height: 28px;
+        line-height: 25px;
         word-spacing: 2px;
 
         @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {

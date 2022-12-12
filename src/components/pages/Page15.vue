@@ -12,10 +12,11 @@
     top: 204px;
     left: 60px;
     width: 270px;
+    line-height:15px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
       top: 290px;
-      left: 23px;
+      left: 20px;
       width: 40%;
     }
 
@@ -34,13 +35,14 @@
     .title {
       span {
         color: #ffffff;
-        font-weight: 900;
+        font-weight: 100;
         word-spacing: 1px;
+        line-height:0px;
 
         @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
           font-size: 10px;
-          font-weight: 900;
-          line-height: 1px;
+          font-weight: 600;
+          line-height: 2px!important;
         }
 
         @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {

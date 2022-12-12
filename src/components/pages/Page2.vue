@@ -35,7 +35,7 @@
     .text {
       span {
         color: #ffffff;
-        font-weight: 900;
+        font-weight: 700;
         word-spacing: 1px;
 
         @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
