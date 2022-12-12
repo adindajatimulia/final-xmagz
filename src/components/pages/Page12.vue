@@ -1,6 +1,6 @@
 <style lang="scss">
 .p13 {
-  background-image: url("/img/pages/page.1/6.2.jpg");
+  background-image: url("/img/pages/12.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,8 +13,8 @@
     width: 412px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-      top: 18px;
-      left: 50px;
+      top: 15px;
+      left: 30px;
       width: 300px;
     }
 
@@ -26,34 +26,32 @@
 
     @media (min-width: $breakpoint-sm) and (max-width: 480px) {
       top: 15px;
-      left: 50px;
+      left: 20px;
       width: 283px;
     }
 
     .title {
-      color: #ffffff;
-      font-size: 2rem;
+      color: #000066;
+      font-size: 3rem;
 
       @media (min-width: $breakpoint-sm) and (max-width: ($breakpoint-xl - 1px)) {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
 
       span {
-        font-weight: 700;
+        font-weight: 900;
       }
     }
   }
 
   .content {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 391px;
-    line-height: 14px;
+    line-height: 10px;
     left: 51px;
+    right: 10000px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-      left: 36px;
-      width: 281px;
+      right: 200px;
+      left: 30px;
     }
 
     @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -62,8 +60,8 @@
     }
 
     @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-      left: 36px;
-      width: 281px;
+      left: 15px;
+      width: 150px;
     }
 
     &.content2 {
@@ -71,7 +69,7 @@
       top: 170px;
 
       @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-        top: 112px;
+        top: 90px;
       }
 
       @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -79,7 +77,7 @@
       }
 
       @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-        top: 105px;
+        top: 95px;
       }
     }
 
@@ -88,7 +86,8 @@
       top: 307px;
 
       @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-        top: 220px;
+        top: 210px;
+        
       }
 
       @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -96,7 +95,7 @@
       }
 
       @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-        top: 210px;
+        top: 200px;
       }
     }
 
@@ -105,7 +104,9 @@
       top: 500px;
 
       @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-        top: 360px;
+        top: 90px;
+        right: 0px;
+        left: 180px;
       }
 
       @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -113,17 +114,19 @@
       }
 
       @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-        top: 338px;
+        top: 90px;
+        left: 170px;
       }
     }
 
     .text {
-      font-size: 0.65rem;
+      font-size: 8px;
       line-height: 12px;
 
       @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-        font-size: 0.45rem;
-        line-height: 10px;
+        font-size: 8px;
+        line-height: 9.2px;
+        font-weight: 900;
       }
 
       @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -132,31 +135,15 @@
       }
 
       @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-        font-size: 0.5rem;
-        line-height: 8px;
+        font-size: 9px;
+        line-height: 9px;
       }
 
       .title {
         margin-bottom: 5px;
 
         span {
-          font-weight: 600;
-        }
-      }
-    }
-
-    .image {
-      display: flex;
-      cursor: pointer;
-
-      img {
-        width: 100px;
-        max-height: 100px;
-        margin: auto;
-
-        @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-          width: 80px;
-          max-height: 80px;
+          font-weight: 900;
         }
       }
     }
@@ -168,11 +155,8 @@
   <div>
     <div style="display: none">
       <div id="p12pt">{{ $t("p12.title") }}</div>
-      <div id="p12p1t">{{ $t("p12.paragraph1t") }}</div>
       <div id="p12p1">{{ $t("p12.paragraph1") }}</div>
-      <div id="p12p2t">{{ $t("p12.paragraph2t") }}</div>
       <div id="p12p2">{{ $t("p12.paragraph2") }}</div>
-      <div id="p12p3t">{{ $t("p12.paragraph3t") }}</div>
       <div id="p12p3">{{ $t("p12.paragraph3") }}</div>
     </div>
 
@@ -180,29 +164,17 @@
       <div id="p12pt_" class="title"></div>
     </div>
     <div class="content content2">
-      <div class="image" v-on:click="showImage('/img/pages/12_1.jpg')">
-        <img src="/img/pages/12_1.jpg" alt="" />
-      </div>
       <div class="text">
-        <div id="p12p1t_" class="title"></div>
         <div id="p12p1_" class="desc"></div>
       </div>
     </div>
     <div class="content content3">
       <div class="text">
-        <div id="p12p2t_" class="title"></div>
         <div id="p12p2_" class="desc"></div>
-      </div>
-      <div class="image" v-on:click="showImage('/img/pages/12_2.jpg')">
-        <img src="/img/pages/12_2.jpg" alt="" />
       </div>
     </div>
     <div class="content content4">
-      <div class="image" v-on:click="showImage('/img/pages/12_3.jpg')">
-        <img src="/img/pages/12_3.jpg" alt="" />
-      </div>
       <div class="text">
-        <div id="p12p3t_" class="title"></div>
         <div id="p12p3_" class="desc"></div>
       </div>
     </div>
@@ -215,17 +187,14 @@ export default {
   mounted() {
     let ref = this;
     ref.processText("p12pt");
-    ref.processText("p12p1t");
     ref.processText("p12p1");
-    ref.processText("p12p2t");
     ref.processText("p12p2");
-    ref.processText("p12p3t");
     ref.processText("p12p3");
     window
       .jQuery("body")
       .on(
         "DOMSubtreeModified",
-        "#p12pt,#p12p1t,#p12p1,#p12p2t,#p12p2,#p12p3t,#p12p3",
+        "#p12pt,#p12p1,#p12p2,#p12p3",
         function () {
           ref.processText(window.jQuery(this).attr("id"));
         }
@@ -234,12 +203,12 @@ export default {
   methods: {
     processText(id) {
       let text = document.getElementById(id).textContent;
-      let r = text.split(".");
+      let r = text.split("");
       document.getElementById(id + "_").innerHTML = "";
       window.jQuery.each(r, function (i, w) {
         var node = document.createElement("span");
         var textnode = document.createTextNode(
-          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : ".")
+          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : "")
         );
         node.appendChild(textnode);
         document.getElementById(id + "_").appendChild(node);

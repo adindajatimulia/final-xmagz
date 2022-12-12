@@ -1,6 +1,6 @@
 <style lang="scss">
 .p10 {
-  background-image: url("/img/pages/page.1/5.1.jpg");
+  background-image: url("/img/pages/9.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +31,7 @@
       width: 197px;
     }
 
-    .title {
+    /*.title {
       span {
         color: #ffffff;
         font-weight: 600;
@@ -50,23 +50,22 @@
           font-size: 0.8rem;
         }
       }
-    }
+    }*/
   }
 
   .content2 {
     color: #ffffff;
     position: absolute;
     top: 119px;
-    left: 31px;
-    width: 203px;
-    text-align: justify;
-    text-indent: 10px;
-    line-height: 12px;
+    left: 32px;
+    text-align: left;
+    line-height: 15px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-      top: 87px;
-      left: 23px;
-      width: 144px;
+      top: 82px;
+      left: 32px;
+      right: 29px;
+      line-height: 12.3px;
     }
 
     @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -76,17 +75,17 @@
     }
 
     @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-      top: 80px;
-      left: 22px;
-      width: 136px;
+      top: 73px;
+      left: 30px;
+      width: 85%;
     }
 
     .text {
-      font-size: 0.69rem;
+      font-size: 6px;
 
       @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-        font-size: 0.5rem;
-        line-height: 8px;
+        font-size: 7px;
+        line-height: 8.5px;
       }
 
       @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -95,7 +94,7 @@
       }
 
       @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-        font-size: 0.465rem;
+        font-size: 7px;
         line-height: 8px;
       }
 
@@ -128,7 +127,6 @@
     <div class="content1">
       <div id="p9t_" class="title"></div>
     </div>
-
     <div class="content2">
       <div id="p9p1_" class="text"></div>
       <div id="p9p2_" class="text"></div>
@@ -161,12 +159,12 @@ export default {
   methods: {
     processText(id) {
       let text = document.getElementById(id).textContent;
-      let r = text.split(".");
+      let r = text.split("");
       document.getElementById(id + "_").innerHTML = "";
       window.jQuery.each(r, function (i, w) {
         var node = document.createElement("span");
         var textnode = document.createTextNode(
-          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : ".")
+          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : "")
         );
         node.appendChild(textnode);
         document.getElementById(id + "_").appendChild(node);

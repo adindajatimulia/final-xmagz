@@ -49,13 +49,6 @@
     <div class="content">
       <div class="row1">
         <div id="p23p1_" class="text"></div>
-        <div class="image">
-          <img
-            src="/img/pages/23_1.jpg"
-            alt=""
-            v-on:click="showImage('/img/pages/23_1.jpg')"
-          />
-        </div>
       </div>
       <div>
         <div id="p23p2_" class="text"></div>
@@ -80,12 +73,12 @@ export default {
   methods: {
     processText(id) {
       let text = document.getElementById(id).textContent;
-      let r = text.split(".");
+      let r = text.split("");
       document.getElementById(id + "_").innerHTML = "";
       window.jQuery.each(r, function (i, w) {
         var node = document.createElement("span");
         var textnode = document.createTextNode(
-          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : ".")
+          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : "")
         );
         node.appendChild(textnode);
         document.getElementById(id + "_").appendChild(node);

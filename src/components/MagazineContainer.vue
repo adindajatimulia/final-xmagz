@@ -1,5 +1,12 @@
 <style lang="scss">
 
+.cover{
+  background-image: url("/img/cover.1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .magazine-container#blur.active{
   filter: blur(15px);
   // pointer-events: none;
@@ -67,7 +74,7 @@
         .language-list {
           display: flex;
           flex-flow: column;
-          max-height: 0px;
+          max-height: 10px;
           transition: 250ms;
 
           &.active {
@@ -350,7 +357,7 @@
     justify-content: center;
     padding: 15px;
     position: relative;
-    bottom: 50px;
+    bottom: 40px;
     transition: 500ms;
 
     &.searchFocus {
@@ -446,7 +453,7 @@
           .title {
             align-self: center;
             color: #ffffff;
-            font-weight: 700;
+            font-weight: 900;
           }
 
           button {
@@ -834,8 +841,8 @@
             class="magazine"
             :style="{ transform: 'scale(' + zoom + ')' }"
           >
-            <div>
-              <video
+            <div class="cover">
+              <!-- <video
                 id="cover"
                 class="cover"
                 autoplay
@@ -844,7 +851,7 @@
                 data-keepplaying
               >
                 <source src="/video/cover.mp4" type="video/mp4" />
-              </video>
+              </video> -->
             </div>
             <Page1 />
             <Page2 />
@@ -869,7 +876,7 @@
             <Page21 />
             <Page22 />
             <Page23 />
-            <Page24 />
+            <!-- <Page24 />
             <Page25 />
             <Page26 />
             <Page27 />
@@ -877,7 +884,7 @@
             <Page29 />
             <Page30 />
             <Page31 />
-            <Page32 />
+            <Page32 /> -->
           </div>
         </div>
       </div>
@@ -1055,7 +1062,34 @@
             </div>
           </li>
         </template>
+        <template v-slot:song>
+          <li>
+            <div>
+              {{ $t("song.music1") }}
+              <audio controls>
+                <source src="/video/just relax.mp3" type="audio/mp3">
+              </audio>
+            </div>
+          </li>
+          <li>
+            <div>
+              {{ $t("song.music2") }}
+              <audio controls>
+                <source src="/video/please calm my mind.mp3" type="audio/mp3">
+              </audio>
+            </div>
+          </li>
+          <li>
+            <div>
+              {{ $t("song.music3") }}
+              <audio controls>
+                <source src="/video/the weekend.mp3" type="audio/mp3">
+              </audio>
+            </div>
+          </li>
+        </template> 
       </Sidebar>
+
     </div>
 
     <div class="footer" :class="{ searchFocus: isSearchFocus }">
@@ -1374,15 +1408,15 @@ import Page20 from "@/components/pages/Page20.vue";
 import Page21 from "@/components/pages/Page21.vue";
 import Page22 from "@/components/pages/Page22.vue";
 import Page23 from "@/components/pages/Page23.vue";
-import Page24 from "@/components/pages/Page24.vue";
-import Page25 from "@/components/pages/Page25.vue";
-import Page26 from "@/components/pages/Page26.vue";
-import Page27 from "@/components/pages/Page27.vue";
-import Page28 from "@/components/pages/Page28.vue";
-import Page29 from "@/components/pages/Page29.vue";
-import Page30 from "@/components/pages/Page30.vue";
-import Page31 from "@/components/pages/Page31.vue";
-import Page32 from "@/components/pages/Page32.vue";
+// import Page24 from "@/components/pages/Page24.vue";
+// import Page25 from "@/components/pages/Page25.vue";
+// import Page26 from "@/components/pages/Page26.vue";
+// import Page27 from "@/components/pages/Page27.vue";
+// import Page28 from "@/components/pages/Page28.vue";
+// import Page29 from "@/components/pages/Page29.vue";
+// import Page30 from "@/components/pages/Page30.vue";
+// import Page31 from "@/components/pages/Page31.vue";
+// import Page32 from "@/components/pages/Page32.vue";
 import jQuery from "jquery";
 
 window.jQuery = jQuery;
@@ -1417,18 +1451,19 @@ export default {
     Page21,
     Page22,
     Page23,
-    Page24,
-    Page25,
-    Page26,
-    Page27,
-    Page28,
-    Page29,
-    Page30,
-    Page31,
-    Page32,
+    // Page24,
+    // Page25,
+    // Page26,
+    // Page27,
+    // Page28,
+    // Page29,
+    // Page30,
+    // Page31,
+    // Page32,
   },
   data() {
     return {
+      flipInterval: null,
       zoom: 1,
       isSearchFocus: false,
       searchField: "",
@@ -1461,6 +1496,9 @@ export default {
       tableOfContent: {
         active: false,
       },
+      coba: false,
+      myInterval : false,
+      // myInterval : setInterval(this.nextPage, 2000),
     };
   },
   mounted() {
@@ -1468,7 +1506,7 @@ export default {
     const mediaQuery = window.matchMedia("(max-width: 1024px)");
 
     if (mediaQuery.matches) {
-      magazine.turn({ display: "single" });
+      magazine.turn({ display: "single" });   
     } else {
       magazine.turn({ display: "double" });
     }
@@ -1524,7 +1562,15 @@ export default {
       // popup.classList.toggle('active');
     },
     autoplay() {
-      setInterval(this.nextPage, 5000);
+      this.myInterval = !this.myInterval;
+      if (this.myInterval == true) {
+        console.log("sdad")
+        this.flipInterval = setInterval(this.nextPage, 1000)
+      }
+      else {
+        // console.log(this.nextPage);
+        clearInterval(this.flipInterval);
+      }
     },
     highlight() {
       const range = window.getSelection().getRangeAt(0),

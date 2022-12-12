@@ -4,8 +4,8 @@
   -webkit-box-shadow: 8px 8px 20px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 8px 8px 20px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 8px 8px 20px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 15px 0 0 15px;
-  display: flex;
+  border-radius: 30px 0 0 30px;
+  display:flex;
   max-height: 100%;
   padding: 20px;
   position: absolute;
@@ -251,9 +251,12 @@
       <Button class="menu-btn" v-on:click.native="autoplay">
         <i class="fas fa-play"></i>
       </Button>
-      <Button class="menu-btn" v-on:click.native="blurbg">
+      <!-- <Button class="menu-btn" v-on:click.native="blurbg">
         <i class="fas fa-dice"></i>
-      </Button>
+      </Button> -->
+      <!-- <Button class="menu-content-toggle-btn" v-on:click.native="toggleContent(2)">
+        <i class="fas fa-music"></i>
+      </Button> -->
     </div>
 
     <div class="contents-container">
@@ -264,8 +267,17 @@
         </ul>
       </div>
     </div>
+    <div v-if="(isSelect == 2)" class="contents-container">
+      <div class="title">{{ $t("song.title") }}</div>
+      <div class="list-group">
+        <ul>
+          <slot name="song"></slot>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
+
 
 <script>
 import Button from "@/components/Button.vue";

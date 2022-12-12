@@ -1,53 +1,196 @@
 <style lang="scss">
 .p18 {
-  background-image: url("/img/pages/page.1/9.1.jpg");
+  background-image: url("/img/pages/17.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 
-  .content {
+  .content1 {
     position: absolute;
-    top: 170px;
+    top: 200px;
+    left: 60px;
+    width: 270px;
 
-    padding-left: 20px;
-    padding-right: 20px;
-
-    display: grid;
-    grid-template-columns: 50% 50%;
-
-    text-align: justify;
-
-    .content1 {
-      padding-right: 5px;
-
-      .text {
-        &::first-letter {
-          color: #000000;
-          font-size: 2rem;
-          float: left;
-          line-height: 30px;
-        }
-      }
+    @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
+      top: 31px;
+      left: 16px;
+      width: 54%;
+      line-height: 15px;
     }
 
-    .content2 {
-      padding-left: 5px;
+    @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
+      top: 172px;
+      left: 50px;
+      width: 211px;
     }
 
-    .title {
-      span {
-        color: $secondary-color;
-
-        font-size: 1.3rem;
-        font-style: italic;
-        font-weight: 700;
-      }
+    @media (min-width: $breakpoint-sm) and (max-width: 480px) {
+      top: 35px;
+      left: 10px;
+      width: 170px;
     }
 
     .text {
-      font-size: 0.5rem;
-      line-height: 11px;
+      span {
+        color: #ffffff;
+        font-weight: 900;
+        word-spacing: 1px;
+
+        @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
+          font-size: 19px;
+        }
+
+        @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
+          font-size: 0.8rem;
+        }
+
+        @media (min-width: $breakpoint-sm) and (max-width: 480px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  //paragraf 2
+  .content2 {
+    position: absolute;
+    top: 263px;
+    left: 28px;
+    text-align: left;
+    line-height: 13px;
+    font-size: 8px;
+
+    @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
+      top: 95px;
+      left: 10px;
+      width: 190px;
+    }
+
+    @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
+      top: 229px;
+      left: 27px;
+      width: 207px;
+    }
+
+    @media (min-width: $breakpoint-sm) and (max-width: 480px) {
+      top: 90px;
+      left: 10px;
+      width: 180px;
+    }
+
+    .text {
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-size: 900;
+
+      @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
+        font-size: 7px;
+        line-height: 9px;
+      }
+
+      @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
+        font-size: 0.65rem;
+        line-height: 11px;
+      }
+
+      @media (min-width: $breakpoint-sm) and (max-width: 480px) {
+        font-size: 6.5px;
+        line-height: 9px;
+      }
+    }
+  }
+  //paragraf 3
+  .content3 {
+    position: absolute;
+    top: 263px;
+    left: 28px;
+    text-align: left;
+    line-height: 13px;
+    font-size: 8px;
+
+    @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
+      top: 188px;
+      left: 10px;
+      width: 190px;
+    }
+
+    @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
+      top: 229px;
+      left: 27px;
+      width: 207px;
+    }
+
+    @media (min-width: $breakpoint-sm) and (max-width: 480px) {
+      top: 182px;
+      left: 10px;
+      width: 166px;
+    }
+
+    .text {
+      color: #ffffff;
+      font-size: 0.7rem;
+
+      @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
+        font-size: 7px;
+        line-height: 9px;
+      }
+
+      @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
+        font-size: 0.65rem;
+        line-height: 11px;
+      }
+
+      @media (min-width: $breakpoint-sm) and (max-width: 480px) {
+        font-size: 6.5px;
+        line-height: 8px;
+      }
+    }
+  }
+  //paragraf 4
+  .content4 {
+    position: absolute;
+    top: 263px;
+    left: 1000px;
+    text-align: left;
+    line-height: 13px;
+    font-size: 7px;
+
+    @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
+      top: 160px;
+      left: 205px;
+    }
+
+    @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
+      top: 229px;
+      left: 27px;
+      width: 207px;
+    }
+
+    @media (min-width: $breakpoint-sm) and (max-width: 480px) {
+      top: 150px;
+      left: 185px;
+      width: 130px;
+    }
+
+    .text {
+      color: #ffffff;
+      font-size: 15px;
+
+      @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
+        font-size: 7.7px;
+        line-height: 9px;
+      }
+
+      @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
+        font-size: 0.65rem;
+        line-height: 11px;
+      }
+
+      @media (min-width: $breakpoint-sm) and (max-width: 480px) {
+        font-size: 6.5px;
+        line-height: 9px;
+      }
     }
   }
 }
@@ -56,19 +199,22 @@
 <template>
   <div>
     <div style="display: none">
-      <div id="p17t">{{ $t("p17.title") }}</div>
       <div id="p17p1">{{ $t("p17.paragraph1") }}</div>
       <div id="p17p2">{{ $t("p17.paragraph2") }}</div>
+      <div id="p17p3">{{ $t("p17.paragraph3") }}</div>
+      <div id="p17p4">{{ $t("p17.paragraph4") }}</div>
     </div>
-
-    <div class="content">
-      <div class="content1">
-        <div id="p17t_" class="title"></div>
-        <div id="p17p1_" class="text"></div>
-      </div>
-      <div class="content2">
-        <div id="p17p2_" class="text"></div>
-      </div>
+    <div class="content1">
+      <div id="p17p1_" class="text text1"></div>
+    </div>
+    <div class="content2">
+      <div id="p17p2_" class="text"></div>
+    </div>
+    <div class="content3">
+      <div id="p17p3_" class="text"></div>
+    </div>
+    <div class="content4">
+      <div id="p17p4_" class="text"></div>
     </div>
   </div>
 </template>
@@ -78,24 +224,25 @@ export default {
   name: "Page17",
   mounted() {
     let ref = this;
-    ref.processText("p17t");
     ref.processText("p17p1");
     ref.processText("p17p2");
+    ref.processText("p17p3");
+    ref.processText("p17p4");
     window
       .jQuery("body")
-      .on("DOMSubtreeModified", "#p17t,#p17p1,#p17p2", function () {
+      .on("DOMSubtreeModified", " #p17p1, #p17p2, #p17p3, #p17p4", function () {
         ref.processText(window.jQuery(this).attr("id"));
       });
   },
   methods: {
     processText(id) {
       let text = document.getElementById(id).textContent;
-      let r = text.split(".");
+      let r = text.split("");
       document.getElementById(id + "_").innerHTML = "";
       window.jQuery.each(r, function (i, w) {
         var node = document.createElement("span");
         var textnode = document.createTextNode(
-          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : ".")
+          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : "")
         );
         node.appendChild(textnode);
         document.getElementById(id + "_").appendChild(node);

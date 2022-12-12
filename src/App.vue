@@ -3,8 +3,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: 'Montserrat';
+  //font-weight: lighter;
   margin: 0;
   padding: 0;
   outline: none;

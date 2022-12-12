@@ -1,6 +1,6 @@
 <style lang="scss">
 .p9 {
-  background-image: url("/img/pages/page.1/4.2.jpg");
+  background-image: url("/img/pages/8.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,13 +11,13 @@
     top: 104px;
     left: 72px;
     width: 252px;
-    text-align: justify;
+    text-align: center;
     text-indent: 10px;
 
     @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-      top: 74px;
-      left: 50px;
-      width: 181px;
+      top: 200px;
+      left: 60px;
+      width: 230px;
     }
 
     @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -27,17 +27,18 @@
     }
 
     @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-      top: 73px;
-      left: 52px;
-      width: 164px;
+      top: 173px;
+      left: 62px;
+      width: 200px;
     }
 
     .text {
       font-size: 0.7rem;
 
       @media (min-width: $breakpoint-lg) and (max-width: ($breakpoint-xl - 1px)) {
-        font-size: 0.5rem;
-        line-height: 10px;
+        font-size: 8px;
+        line-height: 11px;
+        font-weight: 900;
       }
 
       @media (min-width: 481px) and (max-width: ($breakpoint-lg - 1px)) {
@@ -46,8 +47,9 @@
       }
 
       @media (min-width: $breakpoint-sm) and (max-width: 480px) {
-        font-size: 0.5rem;
-        line-height: 10px;
+        font-size: 8px;
+        line-height: 9.5px;
+        font-weight: 900;
       }
 
       &.text1 {
@@ -55,10 +57,10 @@
         margin-bottom: 5px;
 
         &::first-letter {
-          color: #a9203e;
+          color: black;
           font-size: 3rem;
           float: left;
-          line-height: 40px;
+          line-height: 20px;
         }
       }
     }
@@ -98,12 +100,12 @@ export default {
   methods: {
     processText(id) {
       let text = document.getElementById(id).textContent;
-      let r = text.split(".");
+      let r = text.split("`");
       document.getElementById(id + "_").innerHTML = "";
       window.jQuery.each(r, function (i, w) {
         var node = document.createElement("span");
         var textnode = document.createTextNode(
-          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : ".")
+          w + (id.slice(-1) == "t" || id.slice(-1) == "s" ? "" : "")
         );
         node.appendChild(textnode);
         document.getElementById(id + "_").appendChild(node);
